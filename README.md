@@ -48,7 +48,7 @@ overlay: "rgba(255, 0, 0)"
 ```
 
 **loader**
-\*format: file path
+*format: file path
 this option is for linking to your loader gif.
 
 e.g.:
@@ -57,14 +57,15 @@ loader: "./assets/loader.gif"
 ```
 
 **elements**
-\*format: array of css selectors
+*format: array of css selectors
 this option is for quequeing important items to finish loading before presenting our website to the user
 
-*\*Important Note:*
+**Important Note:*
 - Each of the elements array member must point to one and only one html element.
 - Recommended html tags to use on are `<body`, `<img>`, `<frame>`, `<iframe>`, `<link>`, `<script>`
 - By default this will be set to `['body']`
 
 e.g.:
 ```
-element: ['img']
+element: ['img#profile-picture', 'img#cover']
+```
