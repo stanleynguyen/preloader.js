@@ -1,5 +1,6 @@
 #preloaderJS
 preloaderJS is an UI plugin to make sure important resource is loaded before the website is shown to visitors.
+
 [Demo](http://stanleynguyen.github.io/preloader.js/demo.html)
 
 ##Getting Started
