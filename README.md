@@ -33,7 +33,8 @@ e.g.:
 ###Available options
 
 **overlay**
-\*format: color code
+
+*format: color code
 this option is for setting the background color of your preloader.
 
 e.g.:
@@ -48,6 +49,7 @@ overlay: "rgba(255, 0, 0)"
 ```
 
 **loader**
+
 *format: file path
 this option is for linking to your loader gif.
 
@@ -57,6 +59,7 @@ loader: "./assets/loader.gif"
 ```
 
 **elements**
+
 *format: array of css selectors
 this option is for quequeing important items to finish loading before presenting our website to the user
 
