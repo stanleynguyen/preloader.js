@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>preloaderJS Demo</title>
+</head>
+<body>
+    <img style="width: 32.5vw;" src="./src/assets/veryLight.png"/>
+    <img style="width: 32.5vw;" id="impt" src="./src/assets/impt.jpg"/>
+    <img style="width: 32.5vw;" src="./src/assets/veryHeavy.jpg"/>
+    <div style="width: 32.5vw; display: flex; float:left;">
+        <h4 style="text-align: center;">This image is very light and finishes loading before the important image</h4>
+    </div>
+    <div style="width: 32.5vw; display: flex; float:left;">
+        <h4 style="text-align: center;">This image is the important image that we want to make sure it finishes loading before the user can see the site</h4>
+    </div>
+    <div style="width: 32.5vw; display: flex; float:left;">
+        <h4 style="text-align: center;">This image is very heavy and will finish loading after the important image</h4>
+    </div>
+    <script src="./src/preloader.js"></script>
+    <script>
+        var loader = new preloader({elements: ['#impt']});
+        loader.start();
+    </script>
+</body>
