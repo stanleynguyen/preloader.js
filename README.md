@@ -36,7 +36,8 @@ e.g.:
 **overlay**
 
 *format: color code
-this option is for setting the background color of your preloader.
+
+_this option is for setting the background color of your preloader._
 
 e.g.:
 ```javascript
@@ -52,7 +53,8 @@ overlay: "rgba(255, 0, 0)"
 **loader**
 
 *format: file path
-this option is for linking to your loader gif.
+
+_this option is for linking to your loader gif._
 
 e.g.:
 ```javascript
@@ -62,7 +64,8 @@ loader: "./assets/loader.gif"
 **elements**
 
 *format: array of css selectors
-this option is for quequeing important items to finish loading before presenting our website to the user
+
+_this option is for quequeing important items to finish loading before presenting our website to the user_
 
 **_*Important Note:_**
 - Each of the elements array member must point to one and only one html element.
