@@ -1,14 +1,15 @@
 #preloaderJS
 preloaderJS is an UI plugin to make sure important resource is loaded before the website is shown to visitors.
+
 [Demo](http://stanleynguyen.github.io/preloader.js/demo.html)
 
 ##Getting Started
 Include preloader.js
-```
+```html
 <script src="path_to_preloader/preloader.js"></script>
 ```
 To initiate the preloader, include this script after including preloader.js
-```
+```html
 <script>
     var loader = new preloader();
     loader.start();
@@ -19,7 +20,7 @@ To initiate the preloader, include this script after including preloader.js
 TL;DR
 preloader can be customized using available options
 e.g.:
-```
+```html
 <script>
     var options = {
         overlay: '#ffffff', //this is the background color to cover the viewport
@@ -33,38 +34,45 @@ e.g.:
 ###Available options
 
 **overlay**
-\*format: color code
-this option is for setting the background color of your preloader.
+
+*format: color code
+
+_this option is for setting the background color of your preloader._
 
 e.g.:
-```
+```javascript
 overlay: "#ff0000"
 ```
-```
+```javascript
 overlay: "red"
 ```
-```
+```javascript
 overlay: "rgba(255, 0, 0)"
 ```
 
 **loader**
-\*format: file path
-this option is for linking to your loader gif.
+
+*format: file path
+
+_this option is for linking to your loader gif._
 
 e.g.:
-```
+```javascript
 loader: "./assets/loader.gif"
 ```
 
 **elements**
-\*format: array of css selectors
-this option is for quequeing important items to finish loading before presenting our website to the user
 
-*\*Important Note:*
+*format: array of css selectors
+
+_this option is for quequeing important items to finish loading before presenting our website to the user_
+
+**_*Important Note:_**
 - Each of the elements array member must point to one and only one html element.
-- Recommended html tags to use on are `<body`, `<img>`, `<frame>`, `<iframe>`, `<link>`, `<script>`
+- Recommended html tags to use on are `<body>`, `<img>`, `<frame>`, `<iframe>`, `<link>`, `<script>`
 - By default this will be set to `['body']`
 
 e.g.:
+```javascript
+elements: ['img#profile-picture', 'img#cover']
 ```
-element: ['img']
