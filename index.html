@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Preloader.js by stanleynguyen</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Preloader.js</h1>
+          <h2>A modern web browser preloader for resource loading indicator</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/stanleynguyen/preloader.js/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/stanleynguyen/preloader.js/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/stanleynguyen/preloader.js" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="preloaderjs" class="anchor" href="#preloaderjs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>preloaderJS</h1>
+
+<p>preloaderJS is an UI plugin to make sure important resource is loaded before the website is shown to visitors.</p>
+
+<p><a href="http://stanleynguyen.github.io/preloader.js/demo.html">Demo</a></p>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>Include preloader.js</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>path_to_preloader/preloader.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>To initiate the preloader, include this script after including preloader.js</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    <span class="pl-k">var</span> loader <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">preloader</span>();</span>
+<span class="pl-s1">    <span class="pl-smi">loader</span>.<span class="pl-c1">start</span>();</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>TL;DR
+preloader can be customized using available options
+e.g.:</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    <span class="pl-k">var</span> options <span class="pl-k">=</span> {</span>
+<span class="pl-s1">        overlay<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>#ffffff<span class="pl-pds">'</span></span>, <span class="pl-c">//this is the background color to cover the viewport</span></span>
+<span class="pl-s1">        loader<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>./assets/loader.gif<span class="pl-pds">'</span></span>, <span class="pl-c">//path to your loader gif</span></span>
+<span class="pl-s1">        elements<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>body<span class="pl-pds">'</span></span>] <span class="pl-c">//array of important elements</span></span>
+<span class="pl-s1">    }</span>
+<span class="pl-s1">    <span class="pl-k">var</span> loader <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">preloader</span>(options);</span>
+<span class="pl-s1">    <span class="pl-smi">loader</span>.<span class="pl-c1">start</span>();</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<h3>
+<a id="available-options" class="anchor" href="#available-options" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Available options</h3>
+
+<p><strong>overlay</strong></p>
+
+<p>*format: color code
+this option is for setting the background color of your preloader.</p>
+
+<p>e.g.:</p>
+
+<div class="highlight highlight-source-js"><pre>overlay<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>#ff0000<span class="pl-pds">"</span></span></pre></div>
+
+<div class="highlight highlight-source-js"><pre>overlay<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>red<span class="pl-pds">"</span></span></pre></div>
+
+<div class="highlight highlight-source-js"><pre>overlay<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>rgba(255, 0, 0)<span class="pl-pds">"</span></span></pre></div>
+
+<p><strong>loader</strong></p>
+
+<p>*format: file path
+this option is for linking to your loader gif.</p>
+
+<p>e.g.:</p>
+
+<div class="highlight highlight-source-js"><pre>loader<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>./assets/loader.gif<span class="pl-pds">"</span></span></pre></div>
+
+<p><strong>elements</strong></p>
+
+<p>*format: array of css selectors
+this option is for quequeing important items to finish loading before presenting our website to the user</p>
+
+<p><strong><em>*Important Note:</em></strong></p>
+
+<ul>
+<li>Each of the elements array member must point to one and only one html element.</li>
+<li>Recommended html tags to use on are <code>&lt;body&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>
+</li>
+<li>By default this will be set to <code>['body']</code>
+</li>
+</ul>
+
+<p>e.g.:</p>
+
+<div class="highlight highlight-source-js"><pre>elements<span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>img#profile-picture<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>img#cover<span class="pl-pds">'</span></span>]</pre></div>
+        </section>
+
+        <footer>
+          Preloader.js is maintained by <a href="https://github.com/stanleynguyen">stanleynguyen</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
